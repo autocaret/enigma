@@ -1,0 +1,61 @@
+
+	<div class="Form">
+		<form method="post" action="/kontakt/?submit=true" id="ContactForm">
+			<p>
+				<strong>Name:</strong>
+			</p>
+			<p>
+				<input type="text" placeholder="Your name" name="Name" />
+			</p>
+			<p>
+				<strong>Email:</strong>
+			</p>
+			<p>
+				<input type="text" placeholder="din@epost.adr" name="Email" />
+			</p>
+			<p>
+				<strong>Mobile:</strong>
+			</p>
+			<p>
+				<input type="text" placeholder="+XX 403 02 010" name="Mobile" />
+			</p>
+			<p>
+				<strong>Your message:</strong>
+			</p>
+			<p>
+				<textarea name="Message"></textarea>
+			</p>
+			<hr/>
+			<input type="hidden" value="{code}" name="Code" />
+			<p>
+				<button type="button" onclick="validateForm()">
+					Send
+				</button>
+			</p>
+		</form>
+	</div>
+	<script>
+		function validateForm()
+		{
+			let cf = document.getElementById( 'ContactForm' );
+			if( cf.Name.value.indexOf( ' ' ) < 0 )
+			{
+				alert( 'Please enter your full name.' );
+				cf.Name.focus();
+				return;
+			}
+			else if( cf.Email.value.indexOf( '@' ) < 0 && cf.Mobile.value.length < 8 )
+			{
+				alert( 'Please input your mobile number.' );
+				cf.Email.focus();
+				return;
+			}
+			else if( cf.Message.value.length < 40 )
+			{
+				alert( 'Please add message (40 letters minimum)' );
+				cf.Message.focus();
+				return;
+			}
+			cf.submit();
+		}
+	</script>
