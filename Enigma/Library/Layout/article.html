@@ -1,0 +1,70 @@
+<div class="ContentFull Padding ArticleForm SmoothScrolling BackgroundDefault ScrollArea">
+		<table cellspacing="0" cellpadding="0" border="0" width="100%">
+			<tr>
+				<td valign="top" width="50%">
+					<div class="PaddingRight">
+						<p>
+							<strong>Article title:</strong>
+						</p>
+						<p>
+							<input type="text" class="InputHeight FullWidth" value="{title}" maxlength="100" id="title" placeholder="Your article title"/>
+						</p>
+					</div>
+				</td>
+				<td valign="top" width="50%">
+					<div class="PaddingLeft">
+						<p>
+							<strong>Author:</strong>
+						</p>
+						<p>
+							<input type="text" class="InputHeight FullWidth" value="{author}" maxlength="100" id="author" placeholder="Who wrote the article"/>
+						</p>
+					</div>
+				</div>
+			</tr>
+		</table>
+		<p>
+			<strong>Publish on page:</strong>
+		</p>
+		<p>
+			<select id="parent">
+				{pages}
+			</select>
+		</p>
+		<p>
+			<strong>Tags:</strong>
+		</p>
+		<p>
+			<select id="tags" multiple="multiple" size="7" style="width: 100%">
+				{tags}
+			</select>
+		</p>
+		<p>
+			<strong>Enter leadin:</strong>
+		</p>
+		<p>
+			<textarea id="leadin" maxlength="320" onkeydown="ge('Stats').innerHTML = this.value.length + '/320 characters.'">{leadin}</textarea>
+		</p>
+		<p class="Stats" id="Stats">
+			0/280 characters.
+		</p>
+		<p>
+			<strong>Whole article:</strong>
+		</p>
+		<p>
+			<textarea id="article">{article}</textarea>
+		</p>
+	</div>
+	<div class="ContentFull Padding QuoteButtons BorderTop BackgroundDefault">
+		<button type="button" class="FloatRight MarginLeft IconSmall fa-remove" onclick="CloseView()">
+			Cancel
+		</button>
+		<button type="button" class="FloatRight IconSmall fa-save" onclick="SaveArticle()">
+			Save article
+		</button>
+	</div>
+	<script src="Progdir:Library/Script/3rd-party/ckeditor5-build-classic/ckeditor.js"></script>
+	<script src="Progdir:Library/Script/article.js"></script>
+	<input type="hidden" value="{viewId}" id="parentView"/>
+	<input type="hidden" value="{id}" id="articleId"/>
+	<link rel="stylesheet" href="Progdir:Library/Layout/gui.css"/>

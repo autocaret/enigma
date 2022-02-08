@@ -1,0 +1,37 @@
+
+	<div class="ContentFull Padding QuoteForm SmoothScrolling BackgroundDefault ScrollArea">
+		<p>
+			<strong>Enter text:</strong>
+		</p>
+		<p>
+			<textarea id="quote" maxlength="280" onkeydown="ge('Stats').innerHTML = this.value.length + '/280 characters.'">{quote}</textarea>
+		</p>
+		<p class="Stats" id="Stats">
+			0/280 characters.
+		</p>
+		<p>
+			<input type="text" class="InputHeight FullWidth" value="{tags}" maxlength="100" id="tags" placeholder="#yourtag1, #yourtag2"/>
+		</p>
+		<p>
+			<strong>Publish on page:</strong>
+		</p>
+		<p>
+			<select id="parent">
+				{pages}
+			</select>
+		</p>
+	</div>
+	<div class="ContentFull Padding QuoteButtons BorderTop BackgroundDefault">
+		<button type="button" class="FloatRight MarginLeft IconSmall fa-remove" onclick="CloseView()">
+			Cancel
+		</button>
+		<button type="button" class="FloatRight IconSmall fa-save" onclick="SaveQuote()">
+			Save quote
+		</button>
+	</div>
+	<script src="Progdir:Library/Script/quote.js"></script>
+	<input type="hidden" value="{viewId}" id="parentView"/>
+	<input type="hidden" value="{id}" id="articleId"/>
+	<input type="hidden" value="{author}" id="author"/>
+	<link rel="stylesheet" href="Progdir:Library/Layout/gui.css"/>
+

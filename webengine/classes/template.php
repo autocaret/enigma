@@ -67,7 +67,7 @@ class Template
 				$this->article = intval( $pages[2], 10 );
 			}
 			// Just an article
-			else if( ( $pages[1] == 'binders' || $pages[1] == 'quote' ) )
+			else if( ( $pages[1] == 'quote' ) )
 			{
 				$this->mode = 'quote';
 				if( isset( $pages[2] ) && intval( $pages[2], 10 ) > 0 )
@@ -224,7 +224,7 @@ class Template
 			}
 		}
 		// We want to fetch an article
-		// TODO: Needs to be moved to module Binders!
+		// TODO: Needs to be moved to module quote!
 		else if( isset( $this->mode ) && $this->mode == 'quote' )
 		{
 			if( intval( $this->quote, 10 ) > 0 )
@@ -250,7 +250,7 @@ class Template
 					}
 					$arto = $r->fetch_object();
 					$nick = str_replace( ' ', '_', $arto->Author );
-					$linka = '/binders/' . $nick . '/';
+					$linka = '/quote/' . $nick . '/';
 					$article = '<div class="ArticleReading"><div class="Author"><div class="UserImage ' . $nick . '"></div><h1><a href="' . $linka . '">' . $arto->Author . '</a></h1>';
 					$article .= '<p class="Date">' .  date( 'd/m/Y - \k\l\. H:i \C\E\T', strtotime( $arto->Date ) ) . '</p></div>';
 					$article .= '<p class="Leadin">' . $arto->Leadin . '</p>';
@@ -265,7 +265,7 @@ class Template
 				$page = $r->fetch_object();
 				
 				$out = '<div>';
-				$out .= $this->executeModule( 'Binders', $page, $this->quote );
+				$out .= $this->executeModule( 'Quote', $page, $this->quote );
 				$content = '';
 				
 				$this->replacements->page_title = $this->page->Name;

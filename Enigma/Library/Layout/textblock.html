@@ -1,0 +1,50 @@
+
+	<div class="ContentFull Padding TextblockForm SmoothScrolling BackgroundDefault ScrollArea">
+		<p>
+			<strong>Textblock name:</strong>
+		</p>
+		<p>
+			<input type="text" class="InputHeight FullWidth" value="{name}" maxlength="100" id="textblockName" placeholder="Textblock_name"/>
+		</p>
+		<p>
+			<strong>Date:</strong>
+		</p>
+		<p>
+			<input type="date" class="InputHeight" value="{date}" id="textblockDate"/><input type="time" class="InputHeight" value="{time}" id="textblockTime"/>
+		</p>
+		<p>
+			<strong>Enter text:</strong>
+		</p>
+		<p>
+			<textarea id="textblock">{textblock}</textarea>
+		</p>
+		<p>
+			<strong>Priority:</strong>
+		</p>
+		<p>
+			<input type="text" class="InputHeight" value="{priority}" maxlength="5" id="priority" />
+		</p>
+		<p>
+			<strong>Publish on page:</strong>
+		</p>
+		<p>
+			<select id="parent">
+				{pages}
+			</select>
+		</p>
+	</div>
+	<div class="ContentFull Padding QuoteButtons BorderTop BackgroundDefault">
+		<button type="button" class="FloatRight MarginLeft IconSmall fa-remove" onclick="CloseView()">
+			Cancel
+		</button>
+		<button type="button" class="FloatRight IconSmall fa-save" onclick="SaveTextBlock()">
+			Save text block
+		</button>
+	</div>
+	<script src="Progdir:Library/Script/3rd-party/ckeditor5-build-classic/ckeditor.js"></script>
+	<script src="Progdir:Library/Script/textblock.js"></script>
+	<input type="hidden" value="{viewId}" id="parentView"/>
+	<input type="hidden" value="{id}" id="articleId"/>
+	<input type="hidden" value="{author}" id="author"/>
+	<link rel="stylesheet" href="Progdir:Library/Layout/gui.css"/>
+

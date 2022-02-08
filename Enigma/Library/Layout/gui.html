@@ -1,0 +1,65 @@
+<div class="Container">
+	<div class="Menu BorderRight BackgroundLists">
+		<h2 class="PagesHeading">
+			Pages structure
+		</h2>
+		<div class="Pages"></div>
+	</div>
+	<div class="Propblock">
+		<h2 class="PropertiesHeading">
+			Page properties
+		</h2>
+		<div class="Properties SmoothScrolling Padding">
+			
+		</div>
+	</div>
+	<div class="Editor">
+		
+		<h2 class="TopPaletteHeading">
+			New content
+		</h2>
+		<div class="TopPalette BorderLeft">
+			
+			<div class="Palette">
+				<div class="PaletteButton" onclick="addQuote()">
+					<span class="IconLarge fa-twitter-square"></span>
+					Add a "Quote"
+				</div>
+				<div class="PaletteButton" onclick="addArticle()">
+					<span class="IconLarge fa-newspaper-o"></span>
+					Create a news item
+				</div>
+				<div class="PaletteButton" onclick="addTextBlock()">
+					<span class="IconLarge fa-file-text-o"></span>
+					Create a text block
+				</div>
+				<!--<div class="PaletteButton" onclick="addImage()">
+					<span class="IconLarge fa-image"></span>
+					Add new image
+				</div>-->
+			</div>
+		</div>
+		
+		<h2 class="HistoryHeading">
+			<div class="Types">
+				<div class="IconSmall fa-twitter-square"></div>
+				<div class="IconSmall fa-newspaper-o"></div>
+				<div class="IconSmall fa-file-text-o"></div>
+				<div class="IconSmall fa-image"></div>
+			</div>
+			Existing content
+			<div class="Options">
+				<div class="IconSmall fa-table Active" onclick="Config.viewMode = 'grid'; refreshStructure()"></div>
+				<div class="IconSmall fa-list" onclick="Config.viewMode = 'list'; refreshStructure()"></div>
+			</div>
+		</h2>
+		
+		<div class="History BorderLeft">
+		</div>
+		
+	</div>
+</div>
+
+<script src="Progdir:Library/Script/gui.js"></script>
+<script src="https://website.com/api.js"></script>
+<link rel="stylesheet" href="Progdir:Library/Layout/gui.css"/>

@@ -1,0 +1,511 @@
+/* Basic */
+
+.Container > .Menu
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 250px;
+	height: 100%;
+	overflow: auto;
+}
+
+.Container > .Propblock
+{
+	position: absolute;
+	top: 0;
+	left: 250px;
+	width: 300px;
+	height: 100%;
+}
+
+.Container .Editor
+{
+	position: absolute;
+	top: 0;
+	left: 550px;
+	width: calc(100% - 550px);
+	height: 100%;
+	text-align: center;
+}
+
+.Container .Editor .Palette
+{
+	position: absolute;
+	top: 0; 
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+.Editor .Palette .PaletteButton:hover
+{
+	background: #d0d0d0;
+}
+
+.Editor .PaletteButton
+{
+	width: 100px;
+	height: 130px;
+	background-color: white;
+	box-shadow: 2px 2px 8px rgb(0 0 0 / 20%);
+	padding: 10px;
+	box-sizing: border-box;
+	display: inline-block;
+	margin: 0 10px 0 0;
+	border-radius: 3px;
+	border: 2px solid #4e6288;
+	cursor: pointer;
+	transition: background-color 0.15s;
+	color: #222222;
+}
+
+.Editor .PaletteButton > span
+{
+	display: block;
+	width: 100%;
+	height: 48px;
+	font-size: 24px;
+	margin: 7px 0 7px 0;
+}
+
+/* Top */
+
+.PropertiesHeading
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 30px;
+	overflow: hidden;
+	color: white;
+	background: #4e6288;
+	border-left: 1px solid #3B4A66;
+	box-sizing: border-box;
+	font-size: 16px;
+	line-height: 28px;
+	text-align: center;	
+}
+
+.Properties
+{
+	position: absolute;
+	top: 30px;
+	left: 0;
+	width: 100%;
+	height: calc(100% - 30px);
+	overflow: auto;
+}
+
+.TopPaletteHeading
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 30px;
+	overflow: hidden;
+	color: white;
+	background: #4e6288;
+	border-left: 1px solid #3B4A66;
+	box-sizing: border-box;
+	font-size: 16px;
+	line-height: 28px;
+}
+
+.TopPalette
+{
+	position: absolute;
+	top: 30px;
+	left: 0;
+	width: 100%;
+	height: 170px;
+}
+
+/* Page items */
+
+
+.PagesHeading
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 30px;
+	overflow: hidden;
+	color: white;
+	background: #4e6288;
+	box-sizing: border-box;
+	font-size: 16px;
+	line-height: 28px;
+	text-align: center;
+}
+
+html div > .Pages
+{
+	position: absolute;
+	top: 30px;
+	left: 0;
+	width: 100%;
+	height: calc(100% - 30px);
+	overflow: auto;
+	box-sizing: border-box;
+	padding: 20px;
+}
+
+.Pages ul, .Pages li
+{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.Pages ul
+{
+	padding: 5px 0 5px 0;
+}
+
+.Pages li
+{
+	cursor: pointer;
+	padding: 0;
+	max-width: 100%;
+	box-sizing: border-box;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	padding-right: 30px;
+	position: relative;
+}
+
+.Pages li > span.AddPage
+{
+	opacity: 0;
+	pointer-events: none;
+	display: inline-block;
+	padding: 0 3px;
+	background-color: #afafaf;
+	border-radius: 4px;
+	color: white;
+	transition: opacity 0.25s;
+	margin: 0 0 0 5px;
+	position: absolute;
+	right: 5px;
+}
+
+.Pages li:hover > span.AddPage
+{
+	pointer-events: all;
+	opacity: 1;
+}
+
+.Pages li.Current
+{
+	font-weight: bold;
+	background-color: #4e6288;
+	color: white;
+	padding: 5px 30px 5px 5px;
+	border-radius: 3px;
+}
+
+.Pages li.header
+{
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.Pages li:not(.Current):hover
+{
+	color: #ee77aa;
+}
+
+.Pages ul > ul
+{
+    margin: 0 0 0 5px;
+    padding: 5px 5px 0 0;
+}
+
+.HistoryHeading
+{
+	position: absolute;
+	top: 200px;
+	left: 0;
+	width: 100%;
+	height: 30px;
+	overflow: hidden;
+	color: white;
+	background: #4e6288;
+	border-top: 2px solid #334555;
+	box-sizing: border-box;
+	font-size: 16px;
+	line-height: 28px;
+}
+
+.History
+{
+	padding: 20px;
+	position: absolute;
+	top: calc(200px + 30px);
+	left: 0px;
+	width: 100%;
+	height: calc(100% - 230px);
+	overflow: auto;
+	box-sizing: border-box;
+}
+
+.PageItem
+{
+	width: 250px;
+	height: 120px;
+	background: white;
+	border-radius: 3px;
+	box-sizing: border-box;
+	padding: 10px;
+	box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+	float: left;
+	margin: 0 0 20px 20px;
+	position: relative;
+}
+
+.PageItem > .Title
+{
+	position: absolute;
+	top: 10px;
+	left: 0;
+	width: 65%;
+	height: 30px;
+	line-height: 28px;
+	padding: 0 10px 0 10px;
+	box-sizing: border-box;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	background-color: #ee77aa;
+	text-align: left;
+	color: white;
+}
+
+.PageItem > .Content
+{
+	position: absolute;
+	top: 45px;
+	left: 0;
+	width: 100%;
+	height: calc(100% - 55px);
+	padding: 5px 10px;
+	box-sizing: border-box;
+	color: #202020;
+	text-align: left;
+}
+
+.PageItem > .Content .Date
+{
+	font-weight: bold;
+}
+
+.PageItem > .Image
+{
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.PageItem > .Image > img
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+}
+
+.PageItem p
+{
+	margin: 0 0 5px 0;
+	padding: 0;
+}
+
+
+.PageItem .Buttons
+{
+	position: absolute;
+	right: -5px;
+	top: 10px;
+	width: calc(35% + 5px);
+	height: 30px;
+	background-color: #334455;
+	z-index: 10;
+	border-radius: 0 4px 0 0;
+}
+.PageItem .Buttons button,
+.PageItem .Buttons button:hover
+{
+	color: white;
+	padding: 2px;
+	margin: 6px 4px;
+	background-color: transparent;
+}
+
+.PageItem .Buttons:after
+{
+	content: " ";
+	display: block;
+	position: absolute;
+	top: 30px;
+	right: 0px;
+	width: 5px;
+	height: 50px;
+	background: #112233;
+	border-radius: 0 0 4px 0;
+}
+
+.PageItem .Buttons button:after,
+.PageItem .Buttons button:before
+{
+	margin: 0;
+	padding: 0;
+}
+
+/* Quotes */
+
+.QuoteForm textarea
+{
+	width: 100%;
+	height: 270px;
+	font-size: 22px;
+	resize: none;
+	padding: 20px;
+	box-sizing: border-box;
+	line-height: 26px;
+}
+
+.QuoteForm .Stats
+{
+	background: rgba(0,0,0,0.5);
+	border-radius: 3px;
+	border: 1px solid rgba(0,0,0,0.7);
+	text-align: right;
+	padding: 10px 20px;
+}
+
+.QuoteForm
+{
+	height: calc(100% - 50px);
+}
+
+.QuoteButtons
+{
+	height: 50px;
+	bottom: 0;
+	top: auto;
+}
+
+/* Text blocks */
+
+/* Quotes */
+
+.TextblockForm textarea
+{
+	width: 100%;
+	height: 270px;
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+/* Headings */
+
+h2 .Options
+{
+	float: right;
+	margin: 0 20px 0 0;
+}
+
+h2 .Options .IconSmall.Active
+{
+	background-color: rgba(0,0,0,0.7);
+	color: white;
+}
+
+h2 .Types
+{
+	float: left;
+	margin: 0 0 0 20px;
+}
+
+h2 .Options > div, h2 .Types > div
+{
+	display: inline-block;
+	width: 20px;
+	height: 18px;
+	margin: 2px 5px 0 0;
+	cursor: pointer;
+	background-color: transparent;
+	transition: background-color 0.25s;
+	border-radius: 3px;
+	padding: 4px 4px 0px 4px;
+	line-height: 14px;
+}
+
+h2 .Options > div:hover, h2 .Types > div:hover
+{
+	background-color: #5d75a2;
+}
+
+/* Articles */
+
+.ArticleForm #leadin,
+.ArticleForm #article
+{
+	width: 100%;
+	height: 130px;
+	resize: none;
+	box-sizing: border-box;
+}
+
+.ArticleForm #leadin
+{
+	font-size: 22px;
+	line-height: 26px;
+	padding: 20px;
+}
+
+.ArticleForm #article
+{
+	height: 400px;
+}
+
+.ArticleForm .Stats
+{
+	background: rgba(0,0,0,0.5);
+	border-radius: 3px;
+	border: 1px solid rgba(0,0,0,0.7);
+	text-align: right;
+	padding: 10px 20px;
+}
+
+.ArticleForm
+{
+	height: calc(100% - 50px);
+}
+
+/* Archived */
+
+.Archived
+{
+	width: 100%;
+	height: 128px;
+	position: relative;
+	text-align: center;
+	padding: 10px;
+	box-sizing: border-box;
+}
+.Archived:after
+{
+	content: "\f187";
+	font-size: 96px;
+	font-family: "FontAwesome";
+}
